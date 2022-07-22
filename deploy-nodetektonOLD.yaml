@@ -8,7 +8,7 @@ metadata:
   name: node-tekton-config
   labels:
     app: node-tekton-config
-#  namespace: mytest
+  namespace: mytest
 
 data:
   NODETEKTON_PORT: "3010"
@@ -23,7 +23,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: node-tekton
-#  namespace: mytest
+  namespace: mytest
 spec:
   selector:
     matchLabels:
@@ -49,14 +49,14 @@ apiVersion: v1
 kind: Service
 metadata:
   name: node-tekton-np
-#  namespace: mytest
+  namespace: mytest
   labels:
     app: node-tekton
 spec:
   type: NodePort
   ports:
    - port: 3010
-     nodePort: 30059
+     nodePort: 30019
   selector:
    app: node-tekton
 
@@ -68,7 +68,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-#  namespace: mytest
+  namespace: mytest
   name: node-tekton-clu
   labels:
     app: node-tekton-clu
@@ -80,4 +80,3 @@ spec:
      targetPort: 3010
   selector:
    app: node-tekton
-
