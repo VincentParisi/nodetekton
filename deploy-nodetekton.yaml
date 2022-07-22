@@ -35,7 +35,7 @@ spec:
     spec:
       containers:
       - name: app
-        image: vincentparisi/nodetekton:2.0.0
+        image: vincentparisi/nodetekton:3.0.0
 #        imagePullPolicy: Never
         envFrom:
           - configMapRef:
