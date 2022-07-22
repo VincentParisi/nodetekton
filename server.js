@@ -2,7 +2,7 @@ var express = require('express');
 const fs = require( "fs")
 const bodyParser = require('body-parser');
 const  cl = console.log 
-const VERSION = "1.0"
+const VERSION = "2.0"
 
 const app = express();
 
